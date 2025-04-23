@@ -1,0 +1,177 @@
+.sidebar {
+    padding: 0 15px 0 0;
+    position: fixed;
+
+    h5 {
+        font-size: 22px;
+        color: var(--text-color);
+    }
+
+    .card {
+        padding: 16px;
+        // height: calc(100vh - 20px);
+        // overflow: auto;
+    }
+
+    &__content {
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        margin: 20px 0px 3px;
+        padding-top: 20px;
+        height: calc(100vh - 330px);
+        overflow: auto;
+
+        &__label {
+            text-transform: uppercase;
+            color: #6f6f6f;
+            font-size: 13px;
+            padding: 13px 0;
+        }
+
+        .dropdown {
+            &-container {
+                background-color: var(--menu-bg);
+                border-radius: 8px;
+                padding: 10px 20px;
+                transition: max-height 0.3s ease-out;
+                overflow: hidden;
+                a {
+                    color: var(--white);
+                    padding: 8px 12px;
+                    label {
+                        margin-left: 8px;
+                        cursor: pointer;
+                    }
+                    &.active,
+                    &:hover {
+                        background-color: #E6E6E6;
+                        color: var(--text-color);
+                    }
+                }
+            }
+        }
+
+        &__item {
+            margin-bottom: 2px;
+
+            &-noLink {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                color: var(--menu-text-color);
+                padding: 16px 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 4px;
+                cursor: pointer;
+                label{
+                    cursor: pointer;
+                }
+                &.dropdown-open{
+                    .ico{
+                        transform: rotate(180deg);
+                    }
+                }
+                &.active,
+                &:hover {
+                    color: var(--white);
+                    background-color: var(--menu-bg);
+
+                    span {
+                        svg {
+                            path {
+                                stroke: var(--white);
+                            }
+                        }
+                    }
+                }
+            }
+
+            a,
+            &-user,
+            &-btn .btn {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                color: var(--menu-text-color);
+                padding: 16px 12px;
+                border-radius: 5px;
+                font-size: 16px;
+                line-height: 20px;
+
+                &.active,
+                &:hover {
+                    color: var(--white);
+                    background-color: var(--menu-bg);
+
+                    span {
+                        svg {
+                            path {
+                                stroke: var(--white);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-btn .btn {
+                cursor: pointer;
+
+                &:hover {
+                    background-color: transparent;
+                    color: var(--menu-text-color);
+                }
+
+                label {
+                    cursor: pointer;
+                }
+            }
+
+            &-user {
+                color: var(--text-color);
+
+                &:hover {
+                    background-color: transparent;
+                    color: var(--text-color);
+                }
+
+                span {
+                    width: 30px !important;
+                    height: 30px !important;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+
+                label {
+                    margin-left: 8px;
+                }
+            }
+
+            label {
+                margin-left: 5px;
+            }
+
+            span {
+                width: 18px;
+                height: 18px;
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+
+                    path {
+                        stroke: #a3a3a3;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.websocket-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status-connected {
+  background-color: #28a745;
+}
+
+.status-connecting {
+  background-color: #ffc107;
+  animation: pulse 1.5s infinite;
+}
+
+.status-disconnected {
+  background-color: #dc3545;
+}
+
+.status-error {
+  background-color: #dc3545;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.websocket-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.websocket-controls button {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.connect-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+.disconnect-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}

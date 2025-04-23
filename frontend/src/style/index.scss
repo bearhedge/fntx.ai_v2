@@ -1,0 +1,155 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./system/rangeSlider.scss";
+@import "./font.scss";
+@import "./base/base.scss";
+@import "./header/index.scss";
+@import "./auth/index.scss";
+@import "./onboarding/index.scss";
+@import "./sidebar/index.scss";
+@import "./system/index.scss";
+@import "./dashboard/index.scss";
+
+body {
+  background-color: var(--bgColor);
+}
+
+.main {
+  display: flex;
+  min-height: 100vh;
+  padding: 10px;
+  &__wrapper {
+    &__content {
+      min-height: calc(100vh - 72px);
+    }
+  }
+}
+.table {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 15px;
+
+    &__count {
+      background-color: transparent;
+      border: 0px;
+      margin: 0px 4px;
+      padding: 0px 6px;
+    }
+
+    &__ico {
+      background-color: transparent;
+      border: 0;
+      width: 20px;
+      height: 20px;
+
+      &:disabled {
+        svg {
+          path {
+            stroke: #616161;
+          }
+        }
+      }
+
+      svg {
+        path {
+          stroke: var(--primary);
+        }
+
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__next {
+      transform: rotate(-180deg);
+    }
+  }
+
+  th {
+    background-color: var(--bgColor);
+    font-weight: normal;
+    font-size: 15px;
+    padding: 10px;
+    text-align: left;
+    color: var(--text-color);
+
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+    }
+  }
+
+  td {
+    border-bottom: 1px solid var(--bgColor);
+    padding: 15px 10px;
+    font-size: 14px;
+    color: var(--text-color);
+  }
+}
+
+.badge {
+  border-radius: 5px;
+  padding: 3px 5px;
+  text-align: center;
+  font-size: 14px;
+
+  &-gray {
+    background-color: var(--bgColor);
+  }
+
+  &-primary {
+    background-color: rgba(46, 96, 212, 0.223);
+    color: var(--primary);
+  }
+
+  &-danger {
+    background-color: rgba(255, 158, 128, 0.223);
+    color: var(--danger);
+  }
+}
+
+.switch {
+  input[type="checkbox"] {
+    cursor: pointer;
+    -webkit-appearance: none;
+    position: relative;
+    background-color: #bdbdbd;
+    width: 44px;
+    height: 24px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.7s ease;
+  }
+
+  input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    left: 1px;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: all 0.7s ease;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  input[type="checkbox"]:checked::before {
+    background-color: var(--white);
+    left: 21px;
+  }
+
+  input[type="checkbox"]:checked {
+    background-color: var(--text-color);
+  }
+}

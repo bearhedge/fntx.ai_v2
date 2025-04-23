@@ -1,0 +1,61 @@
+.onboarding {
+    // margin-top: 20px;
+    .btn-baselay {
+        min-width: 215px;
+    }
+    padding-top: 60px;
+    &-confirm-tick{
+        width: 30px;
+        height: 30px;
+    }
+    .col-12{
+        padding: 0 12px;
+    }
+    h3{
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 30px;
+        color: var(--text-color);
+        @media only screen and (max-width: 500px) {
+            line-height: 50px;
+        }
+    }
+    &__confirm{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    h5{
+        font-size: 32px;
+        line-height: 40;
+    }
+    .btn{
+        min-height: 54px;
+        &:hover{
+            svg{
+                path{
+                fill: var(--white);
+            }
+            }
+        }
+        svg{
+            margin-left: 0.5rem;
+        }
+    }
+    .card {
+        height: 100%;
+        display: flex;
+        padding: 24px;
+        justify-content: space-between;
+    }
+
+    h6 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
